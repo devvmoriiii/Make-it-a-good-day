@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+  <title>Make it a good day</title>
+</head>
+<body>
+  <main id="wrap">
+    <!-- 왼쪽 -->
+    <div id="main-wrap">
+      <!-- !sign in div -->
+      <div id="signIn-wrap">
+        <div id="name-q">
+          <h1>What's your name ?</h1>
+        </div>
+        <div id="name-form-box">
+          <form action="" id="name-form">
+            <div id="name-input">
+              <input type="text" required autofocus placeholder="Enter your name"/>
+            </div>
+            <div id="name-btn">
+              <button type="submit">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- !greeting div -->
+      <div id="greeting-wrap">
+        <div id="greeting-text">
+          <h1>Make it a GOOD day,</h1>
+        </div>
+        <div id="greeting-name">
+          <h1><span></span> !</h1>
+        </div>
+      </div>
+
+      <!-- !to.do div -->
+      <div id="todo-wrap">
+        <div id="todo-q">
+          <h1>What's the plan for the day ?</h1>
+        </div>
+        <div id="todo-form-box">
+          <form action="" id="todo-form">
+            <div id="todo-input">
+              <input type="text" required autofocus placeholder="Enter your plan">
+            </div>
+            <div id="todo-btn">
+              <button type="submit">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- 오른쪽 메뉴 -->
+    <div id="menu-wrap">
+      <!-- !date & weather div -->
+      <div id="dateWeather-wrap">
+        <div id="date-box">
+          <div id="month-div">
+            <span></span>
+          </div>
+          <div id="year-div">
+            <span></span>
+          </div>
+          <div id="week-div">
+            <span></span>
+          </div>
+          <div id="day-div">
+            <span></span>
+          </div>
+        </div>
+
+        <div id="weather-box">
+            <div id="region-div">
+              <span id="region-success"></span>
+              <span id="region-fail"></span>
+            </div>
+            <div id="tem-div">
+              <span></span>
+            </div>
+          <div id="icon-div">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- !time div -->
+      <div id="time-wrap">
+        <span></span>
+      </div>
+
+      <!-- !tod.oList div -->
+      <div id="todoList-wrap">
+        <div id="todoList-ulBox">
+          <ul>
+          </ul>
+        </div>
+        <div id="delSignOutBox">
+          <div id="todoList-btnBox">
+            <button type="button">Delete All</button>
+          </div>
+          <div id="signOutBox">
+            <button type="submit">Sign Out</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- !horoscope div -->
+      <div id="horoscope-wrap">
+        <div id="horoscope-box">
+          <span></span>
+        </div>
+        <div id="horoscope-url-box">
+          <a href="https://www.elle.com/horoscopes/monthly/" target="_blank">Monthly horoscopes 2023</a>
+          <span>by ELLE</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/randomBG.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/logInOut.js"></script>
+  <script src="js/horoscope.js"></script>
+  <script src="js/todoList.js"></script>
+</body>
+</html>

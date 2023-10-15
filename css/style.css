@@ -1,0 +1,373 @@
+/* !초기화 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+ul, ol, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  background: none;
+  font-size: 25px;
+  width: 100%;
+}
+
+input {
+  border: none;
+  background: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 15px;
+}
+
+button:hover {
+  font-weight: 600;
+}
+
+button:hover, a:hover {
+  cursor: pointer;
+}
+
+input:focus, button:focus, a:focus {
+  outline: none;
+}
+body::after{
+  position:absolute; 
+  width:0; 
+  height:0; 
+  overflow:hidden; 
+  z-index:-1;
+  content:url(../resources/bg1.jpg) url(../resources/bg2.jpg) url(../resources/bg3.jpg) url(../resources/bg4.jpg) url(../resources/bg5.jpg) url(../resources/bg6.jpg) url(../resources/bg7.jpg) url(../resources/bg8.jpg) url(../resources/bg9.jpg) url(../resources/bg10.jpg) url(../resources/bg11.jpg) url(../resources/bg12.jpg)
+}
+
+/* !기본 구조 */
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url(../resources/bg5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  transition: background-image 3s ease-in-out;
+} 
+
+h1 {
+  font-weight: 900;
+  font-size: 60px;
+  font-family: 'Play', sans-serif;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+#main-wrap {
+  width: 75%;
+  height: 100%;
+  float: left;
+  display: table;
+}
+#menu-wrap {
+  width: 25%;
+  height: 100%;
+  float: right;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* !main-wrap */
+.show {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  transition: all 2s ease-in-out;
+}
+.hidden {
+  display: none;
+  transition: all 2s ease-in-out;
+}
+
+
+#main-wrap div[id*="q"], #main-wrap div[id*="box"] {
+  width: 80%;
+  margin: auto;
+}
+
+#main-wrap div[id*="input"] {
+  width: 70%;
+  float: left;
+  padding-top: 5%;
+  padding-left: 10%;
+}
+
+#main-wrap input {
+  border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+  width: 100%;
+}
+
+#main-wrap div[id*="btn"] {
+  width: 30%;
+  float: right;
+  padding-top: 5%;
+}
+
+#greeting-name {
+  padding-top: 1%;
+}
+
+/* !menu-wrap */
+#menu-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#menu-wrap>div:nth-child(1) {
+  flex-basis: 15%;
+  flex-grow: 1;
+  height: 100%;
+}
+#menu-wrap>div:nth-child(2) {
+  flex-basis: 12.5%;
+  flex-grow: 1;
+  height: 100%;
+}
+#menu-wrap>div:nth-child(3) {
+  flex-basis: 57.5%;
+  flex-grow: 4;
+  height: 100%;
+}
+#menu-wrap>div:nth-child(4) {
+  flex-basis: 15%;
+  flex-grow: 1;
+  height: 100%;
+}
+
+#menu-wrap div[id*="wrap"] {
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+}
+#menu-wrap div[id*="wrap"]:last-child {
+  border-bottom: none;
+}
+
+/* !menu-wrap - date & weather */
+#date-box, #weather-box {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#date-box {
+  border-right: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+#month-div, #year-div {
+  border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+#month-div, #year-div, #icon-div, #tem-div, #week-div, #day-div {
+  width: 50%;
+  height: 50%;
+  float: left;
+  position: relative;
+}
+
+
+#region-div {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+#time-wrap {
+  position: relative;
+}
+
+/* !menu-wrap - todoList */
+#todoList-ulBox, #delSignOutBox {
+  width: 100%;
+}
+#todoList-ulBox {
+  height: 85%;
+  overflow: scroll;
+}
+#todoList-ulBox ul {
+  height: 100%;
+}
+
+#delSignOutBox {
+  height: 15%;
+}
+#todoList-btnBox, #signOutBox {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+#todoList-btnBox button, #signOutBox button {
+  width: 100%;
+  height: 100%;
+}
+
+#signOutBox button:hover {
+  color: red
+}
+
+/* !menu-wrap - horoscope */
+#horoscope-box {
+  height: 60%;
+  text-align: center;
+  display: table;
+  width: 100%;
+}
+#horoscope-url-box {
+  height: 40%;
+  text-align: center;
+}
+#horoscope-url-box a {
+  font-size: 16px;
+  text-decoration: underline;
+  color:blueviolet;
+}
+
+#horoscope-url-box a:hover {
+  font-weight: 500;
+}
+
+#horoscope-url-box span {
+  font-size: 10px;
+  padding: 1%;
+}
+
+/* !with js */
+.hidden {
+  display: none;
+}
+
+.newLi {
+  width: 100%;
+  display: table;
+  height: 15%;
+}
+
+.newLiTextDiv {
+  display: table-cell;
+  vertical-align: middle;
+  width: 80%;
+  text-align: center;
+}
+
+.newLiDelDiv {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%;
+  text-align: center;
+}
+
+.newLiDelDiv span {
+  color: red;
+
+}
+.newLiDelDiv span:hover {
+  cursor: pointer;
+  font-weight: 900;
+}
+
+/* ?withJS - main */
+#greeting-name span {
+  font-family: 'Play', sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+  color: blueviolet
+}
+
+#greeting-wrap:hover {
+  cursor: pointer;
+}
+
+
+/* ?withJS - date & weather */
+#time-wrap span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 65px;
+  font-weight: 700;
+}
+
+#month-div span, #year-div span, #week-div span, #day-div span, #region-success, #tem-div span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  transform: translate(0, 15%);
+}
+
+#month-div span, #year-div span {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+#day-div span {
+  font-size: 40px;
+  transform: translate(0, 0);
+  color: blueviolet;
+}
+
+#region-div, #tem-div, #icon-div {
+  position: relative;
+}
+
+#icon-div img {
+  width: 50%;
+  margin: 5% auto;
+}
+
+#region-fail {
+  display: inline-block;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  color: red;
+  text-align: center;
+  height: 100%;
+  padding: 10%;
+}
+
+/* ?withJS - todo */
+.newLiTextDiv span, .newLiDelDiv span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/*? withJS - horoscope */
+#horoscope-box span{
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 500;
+}
