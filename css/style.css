@@ -207,7 +207,8 @@ h1 {
 }
 #todoList-ulBox {
   height: 85%;
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow: auto;
 }
 #todoList-ulBox ul {
   height: 100%;
