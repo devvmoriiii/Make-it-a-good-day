@@ -23,6 +23,7 @@
 - OpenWeatherMap API 를 활용하여 이용자 현재 위치에 따른 날씨 노출
 
 ## Preview
+![preview](https://github.com/komoriiii/Make-it-a-good-day/assets/136110637/5880a11f-1ff4-42bf-a5c1-55493eb6e2d1)
 
 
 
